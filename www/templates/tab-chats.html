@@ -3,16 +3,17 @@
     <div class="list card">
       <div class="item item-divider">Camera</div>
       <div class="item item-body">
-        <div ng-controller="GraphCtrl">
-            <ion-option-button class="button-active" id="one" ng-click="takePicture(); show();">
-              Take Picture
-            </ion-option-button>
-            <ion-option-button class="button-active" id="two" ng-click="moveToDataScreen();">
-              Submit
-            </ion-option-button>
+        <div ng-controller="CamCtrl">
 
             <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
             <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+
+            <ion-option-button class="button" id="one" ng-click="takePicture(); show();">
+              Take Picture
+            </ion-option-button>
+            <!-- ion-option-button class="button-active" id="two" ng-click="moveToDataScreen();">
+              Submit 
+            </ion-option-button> -->
 
         </div>
       </div>
